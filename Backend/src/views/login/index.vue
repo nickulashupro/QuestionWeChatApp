@@ -63,8 +63,9 @@
 //        },
         methods:{
             handleLogin(){
-                console.log(this.$refs)
+                console.log(this.$refs, 'oooo')
                 this.$refs.loginForm.validate(valid=>{
+                    console.log(valid, 'oooo')
                     if(valid){
                         this.loading = true
                         this.$store.dispatch('Login',this.loginForm).then(()=>{
